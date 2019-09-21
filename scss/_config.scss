@@ -1,0 +1,33 @@
+// SCSS variables are initialized with the "$"
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url('/img/pexels-photo-577585.jpeg');
+$background-opacity: 0.7;
+
+
+// A mixin is like a function.
+@mixin easeOut {
+  transition: all 0.5s ease-out
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: '';
+        background: rgba($primary-color, $background-opacity);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}
