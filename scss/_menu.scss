@@ -89,7 +89,7 @@
     }
 
     .portrait {
-      background: url('/img/IMG_2356.jpg');
+      background: url('../img/IMG_2356.jpg');
       background-size: cover;
       border: solid 3px $secondary-color;
       border-radius: 50%;
@@ -114,7 +114,7 @@
   }
 
   .nav-link {
-    color: white;
+    color: set-text-color($primary-color);
     display: inline-block;
     font-size: 30px;
     font-weight: 300;
