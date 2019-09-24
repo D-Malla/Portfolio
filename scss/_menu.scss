@@ -89,8 +89,11 @@
     }
 
     .portrait {
-      background: url('../img/IMG_2356.jpg');
-      background-size: cover;
+      background-image: url('../img/headshot.JPG');
+      background-color: #B3B6AD;
+      background-position-x: 25px;
+      background-repeat: no-repeat;
+      background-size: 12rem;
       border: solid 3px $secondary-color;
       border-radius: 50%;
       height: 250px;
