@@ -53,7 +53,7 @@
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
       background-image: url("../img/headshot.JPG");
-      background-color: #B3B6AD;
+      background-color: #AFBBB9;
       background-position-x: 25px;
       background-repeat: no-repeat;
       background-size: 12rem;
@@ -273,6 +273,21 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+    main#about h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem; }
+    main#work h1 {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem; }
+    main#contact h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -289,6 +304,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
+      background-size: contain;
       height: 150px;
       width: 150px; }
   .about-info {

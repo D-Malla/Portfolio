@@ -22,6 +22,27 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+
+    &#about h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    &#work h1 {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    &#contact h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
   }
 
   ul.menu-nav,
@@ -46,6 +67,7 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
+      background-size: contain;
       height: 150px;
       width: 150px;
     }
