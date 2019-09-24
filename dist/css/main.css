@@ -54,7 +54,7 @@
     .menu-branding .portrait {
       background: url("../img/IMG_2356.jpg");
       background-size: cover;
-      border: solid 3px #eece1a;
+      border: solid 3px #519872;
       border-radius: 50%;
       height: 250px;
       width: 250px;
@@ -65,7 +65,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #519872; }
   .menu .nav-link {
     color: white;
     display: inline-block;
@@ -77,7 +77,7 @@
     text-transform: uppercase;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #519872; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -145,7 +145,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #519872; }
 
 main {
   min-height: calc(100vh - 60px);
@@ -157,7 +157,7 @@ main {
       padding: 0.6rem;
       /* As long as the pseudo selector is within the tag you want to apply the pseudo selector. */ }
       main .icons a:hover {
-        color: #eece1a;
+        color: #519872;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -167,11 +167,11 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'skills1 skills2 skills3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio' 'skills1 skills2';
+  grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-image {
     background-size: contain;
-    border: #eece1a 3px solid;
+    border: #519872 3px solid;
     border-radius: 50%;
     grid-area: bioimage;
     height: 350px;
@@ -185,12 +185,68 @@ main {
     grid-area: skills1; }
   .about-info .skills-2 {
     grid-area: skills2; }
-  .about-info .skills-3 {
-    grid-area: skills3; }
   .about-info .skills {
+    text-align: center;
     background: #515151;
-    padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #519872 5px solid;
+    padding: 0.5rem; }
+  .about-info .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .about-info .technologies .logo-container {
+      margin: 0 20px;
+      text-align: center; }
+      .about-info .technologies .logo-container .express {
+        margin-top: 30px; }
+
+.projects {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    border: 3px white solid;
+    width: 100%; }
+    .projects img:hover {
+      border-color: #519872;
+      opacity: 0.5px;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem; }
+  .boxes div {
+    border: 3px white solid;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2.5rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      background: #519872;
+      color: black;
+      padding: 0.5rem 1.5rem; }
+      .boxes div:hover span {
+        color: black; }
+
+.btn, .btn-dark, .btn-light {
+  border: 0;
+  display: block;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem 1rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #519872;
+    color: black; }
+
+.btn-dark {
+  background: black;
+  color: white; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
 
 #main-footer {
   background: #2b2b2b;
@@ -198,6 +254,14 @@ main {
   height: 60px;
   padding: 1rem;
   text-align: center; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -226,10 +290,14 @@ main {
       width: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'skills1' 'skills2' 'skills3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main {
     padding: 2rem; }
     main #home h1 {
-      margin-top: 10vh; } }
+      margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
